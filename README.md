@@ -1,6 +1,3 @@
-<!-- <p align="center">
-    <img alt="Logo Codenation" src="logo.png">
-</p> -->
 
 <h1 align="center">
     Jukebox project for spotify
