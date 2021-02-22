@@ -1,3 +1,7 @@
+<p align="center">
+    <img alt="Spotify Logo" src="https://www.vectorlogo.zone/logos/spotify/spotify-icon.svg">
+</p>
+
 <h1 align="center">
     Jukeboxify
 </h1>
