@@ -7,7 +7,7 @@
 </h1>
 
 <h2 align="center">
-    Made by: Hugo Pfeffer and Gustavo Gianini 
+    Voting tool for playing songs on Spotify 
 </h2>
 
 <p align="center">
