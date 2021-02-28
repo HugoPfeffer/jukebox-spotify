@@ -1,6 +1,8 @@
 #SCRIPTS
 $npm_install = <<-SCRIPT
-sudo dnf install -y npm
+sudo dnf update &&
+sudo dnf install -y npm &&
+sudo npm install -g expo-cli
 SCRIPT
 
 
