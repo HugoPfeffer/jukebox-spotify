@@ -12,10 +12,17 @@
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+<<<<<<< HEAD
     <quarkus-plugin.version>1.11.3.Final</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>1.11.3.Final</quarkus.platform.version>
+=======
+    <quarkus-plugin.version>1.12.0.Final</quarkus-plugin.version>
+    <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
+    <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
+    <quarkus.platform.version>1.12.0.Final</quarkus.platform.version>
+>>>>>>> 9a0c4adbf1c7d9dd869d21e07333098e2dd23569
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
   </properties>
   <dependencyManagement>
@@ -32,7 +39,11 @@
   <dependencies>
     <dependency>
       <groupId>io.quarkus</groupId>
+<<<<<<< HEAD
       <artifactId>quarkus-hibernate-validator</artifactId>
+=======
+      <artifactId>quarkus-arc</artifactId>
+>>>>>>> 9a0c4adbf1c7d9dd869d21e07333098e2dd23569
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -40,6 +51,7 @@
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
+<<<<<<< HEAD
       <artifactId>quarkus-jdbc-mysql</artifactId>
     </dependency>
     <dependency>
@@ -48,6 +60,8 @@
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
+=======
+>>>>>>> 9a0c4adbf1c7d9dd869d21e07333098e2dd23569
       <artifactId>quarkus-junit5</artifactId>
       <scope>test</scope>
     </dependency>
