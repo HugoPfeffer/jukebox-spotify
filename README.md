@@ -29,7 +29,7 @@ Our main goal is to make the app containerized and fully scalable on Kubernetes 
 <ul>
     <li>Quarkus</li>
     <li>Docker</li>
-    <li>Reactive</li>
+    <li>Reactive Native</li>
 </ul>
 </br>
 
