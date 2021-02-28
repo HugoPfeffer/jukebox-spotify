@@ -1,4 +1,4 @@
-package org.acme;
+package br.com.cmms;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

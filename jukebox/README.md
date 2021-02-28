@@ -1,4 +1,4 @@
-# code-with-quarkus project
+# jukebox project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -41,13 +41,9 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
 ```
 
-You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
+You can then execute your native executable with: `./target/jukebox-1.0.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
-
-## Related guides
-
-- RESTEasy JAX-RS ([guide](https://quarkus.io/guides/rest-json)): REST endpoint framework implementing JAX-RS and more
 
 ## Provided examples
 
@@ -56,9 +52,3 @@ If you want to learn more about building native executables, please consult http
 REST is easy peasy with this Hello World RESTEasy resource.
 
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
-
-### RESTEasy JSON serialisation using Jackson
-
-This example demonstrate RESTEasy JSON serialisation by letting you list, add and remove quark types from a list. Quarked!
-
-[Related guide section...](https://quarkus.io/guides/rest-json#creating-your-first-json-rest-service)
