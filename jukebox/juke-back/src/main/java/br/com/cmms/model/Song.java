@@ -6,6 +6,7 @@ public class Song {
     private String name;
     private String author;
     private int duration;
+    private int votes;
 
     public Long getId() {
         return Id;
@@ -37,6 +38,20 @@ public class Song {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public int getVotes() {
+        return votes;
+    }
+
+    public void setVotes(int votes) {
+        this.votes = votes;
+    }
+
+    @Override
+    public String toString() {
+        return "Song [Id=" + Id + ", author=" + author + ", duration=" + duration + ", name=" + name + ", votes="
+                + votes + "]";
     }
 
 }

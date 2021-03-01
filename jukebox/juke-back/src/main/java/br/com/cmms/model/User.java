@@ -44,4 +44,9 @@ public class User {
     public ArrayList<Playlist> getPlaylists() {
         return playlists;
     }
+
+    @Override
+    public String toString() {
+        return "User [Id=" + Id + ", email=" + email + ", name=" + name + ", playlists=" + playlists + "]";
+    }
 }

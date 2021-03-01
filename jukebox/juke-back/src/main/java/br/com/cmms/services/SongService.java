@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import javax.enterprise.context.ApplicationScoped;
 
 import br.com.cmms.model.Playlist;
-import br.com.cmms.model.User;
+import br.com.cmms.model.Song;
 
 @ApplicationScoped
-public class PlaylistService {
+public class SongService {
 
-    public ArrayList<Playlist> generatePlaylists(User user) {
-        return user.getPlaylists();
+    public ArrayList<Song> generateSongs(Playlist playlist) {
+        return playlist.getSongs();
     }
 
 }
