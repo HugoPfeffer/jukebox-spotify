@@ -32,11 +32,7 @@
   <dependencies>
     <dependency>
       <groupId>io.quarkus</groupId>
-<<<<<<< HEAD
-      <artifactId>quarkus-hibernate-validator</artifactId>
-=======
       <artifactId>quarkus-arc</artifactId>
->>>>>>> 9a0c4adbf1c7d9dd869d21e07333098e2dd23569
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -44,17 +40,6 @@
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
-<<<<<<< HEAD
-      <artifactId>quarkus-jdbc-mysql</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-arc</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-=======
->>>>>>> 9a0c4adbf1c7d9dd869d21e07333098e2dd23569
       <artifactId>quarkus-junit5</artifactId>
       <scope>test</scope>
     </dependency>
