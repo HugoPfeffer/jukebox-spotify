@@ -1,6 +1,8 @@
 package br.com.cmms.model;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
@@ -9,20 +11,20 @@ public class User {
     public User() {
     }
 
-    public User(long Id, String name, String email) {
+    public User(long id, String name, String email) {
     }
 
-    private Long Id;
+    private Long id;
     private String name;
     private String email;
-    private ArrayList<Playlist> playlists = new ArrayList<Playlist>();
+    private List<Playlist> playlists = new ArrayList<>();
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -41,12 +43,12 @@ public class User {
         this.email = email;
     }
 
-    public ArrayList<Playlist> getPlaylists() {
+    public List<Playlist> getPlaylists() {
         return playlists;
     }
 
     @Override
     public String toString() {
-        return "User [Id=" + Id + ", email=" + email + ", name=" + name + ", playlists=" + playlists + "]";
+        return "User [Id=" + id + ", email=" + email + ", name=" + name + ", playlists=" + playlists + "]";
     }
 }

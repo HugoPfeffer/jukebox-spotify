@@ -2,7 +2,7 @@ package br.com.cmms.services;
 
 import javax.enterprise.context.ApplicationScoped;
 
-import br.com.cmms.db.userDatabase;
+import br.com.cmms.db.UserDatabase;
 import br.com.cmms.model.Playlist;
 import br.com.cmms.model.Song;
 import br.com.cmms.model.User;
@@ -23,7 +23,7 @@ public class UserService {
         rock.setName("rock");
         ggianini.getPlaylists().add(mpb);
         ggianini.getPlaylists().add(rock);
-        userDatabase.getUsers().add(ggianini);
+        UserDatabase.getUsers().add(ggianini);
         Song aguasdemarco = new Song();
         aguasdemarco.setId(1L);
         aguasdemarco.setName("Águas de Março");

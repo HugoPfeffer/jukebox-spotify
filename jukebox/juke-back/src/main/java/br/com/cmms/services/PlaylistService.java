@@ -1,6 +1,6 @@
 package br.com.cmms.services;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 
@@ -10,7 +10,7 @@ import br.com.cmms.model.User;
 @ApplicationScoped
 public class PlaylistService {
 
-    public ArrayList<Playlist> generatePlaylists(User user) {
+    public List<Playlist> generatePlaylists(User user) {
         return user.getPlaylists();
     }
 

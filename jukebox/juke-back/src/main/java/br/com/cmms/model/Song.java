@@ -2,18 +2,18 @@ package br.com.cmms.model;
 
 public class Song {
 
-    private Long Id;
+    private Long id;
     private String name;
     private String author;
     private int duration;
     private int votes;
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -59,10 +59,8 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Song [Id=" + Id + ", author=" + author + ", duration=" + duration + ", name=" + name + ", votes="
+        return "Song [Id=" + id + ", author=" + author + ", duration=" + duration + ", name=" + name + ", votes="
                 + votes + "]";
     }
-
-
 
 }
