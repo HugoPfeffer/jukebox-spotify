@@ -19,7 +19,7 @@ public class UserService {
         mpb.setId(1L);
         mpb.setName("mpb");
         Playlist rock = new Playlist();
-        rock.setId(1L);
+        rock.setId(2L);
         rock.setName("rock");
         ggianini.getPlaylists().add(mpb);
         ggianini.getPlaylists().add(rock);

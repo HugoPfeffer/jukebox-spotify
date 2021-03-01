@@ -48,10 +48,21 @@ public class Song {
         this.votes = votes;
     }
 
+    public void vote() {
+        votes++;
+    }
+
+    public void removeVote() {
+        if (votes >= 0)
+            votes--;
+    }
+
     @Override
     public String toString() {
         return "Song [Id=" + Id + ", author=" + author + ", duration=" + duration + ", name=" + name + ", votes="
                 + votes + "]";
     }
+
+
 
 }

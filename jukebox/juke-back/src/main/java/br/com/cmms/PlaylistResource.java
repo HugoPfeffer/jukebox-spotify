@@ -67,4 +67,21 @@ public class PlaylistResource {
         return songService.generateSongs(playlistService.generatePlaylists(userService.generateUsers()).get(playlistId));
     }
 
+    @GET
+    @Path("/vote/{playlistId}/{songId}")
+    @Produces(MediaType.APPLICATION_JSON)
+
+    public Song voteSongByPlaylistIdandSongId(@PathParam("playlistId") int playlistId, @PathParam("songId") int songId) {
+    songService.generateSongs(playlistService.generatePlaylists(userService.generateUsers()).get(playlistId)).get(songId).vote();
+    return songService.generateSongs(playlistService.generatePlaylists(userService.generateUsers()).get(playlistId)).get(songId);
+    }
+
+@GET
+@Path("/remove-vote/{playlistId}/{songId}")
+@Produces(MediaType.APPLICATION_JSON)
+
+public Song removeVoteSongByPlaylistIdandSongId(@PathParam("playlistId") int playlistId, @PathParam("songId") int songId) {
+    songService.generateSongs(playlistService.generatePlaylists(userService.generateUsers()).get(playlistId)).get(songId).removeVote();
+    return songService.generateSongs(playlistService.generatePlaylists(userService.generateUsers()).get(playlistId)).get(songId);
+}
 }
