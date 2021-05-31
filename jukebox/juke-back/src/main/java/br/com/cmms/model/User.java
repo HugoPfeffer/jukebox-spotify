@@ -2,6 +2,7 @@ package br.com.cmms.model;
 
 import java.util.List;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Transient;
 
 import io.quarkus.security.jpa.Password;
 import io.quarkus.security.jpa.Roles;
@@ -64,7 +64,7 @@ public class User {
         this.username = username;
     }
     
-    @Transient
+    @JsonbTransient
     public String getPassword() {
         return password;
     }
