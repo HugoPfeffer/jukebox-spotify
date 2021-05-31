@@ -1,5 +1,7 @@
 package br.com.cmms.resource;
 
+import java.util.List;
+
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
@@ -32,12 +34,12 @@ public class UserResource {
     @GET
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
-    public void listAllUsers(){
-        userService.listAllUsers();
+    public List<User> listAllUsers(){
+       return userService.listAllUsers();
     }
     
     @GET
-    @Path("/user/{userId}")
+    @Path("{userId}")
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
     public User getUserById(@PathParam("userId") Long userId) {

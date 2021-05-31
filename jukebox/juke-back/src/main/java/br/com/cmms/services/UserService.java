@@ -1,11 +1,13 @@
 package br.com.cmms.services;
 
+import java.util.List;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.transaction.Transactional;
 
 import br.com.cmms.model.User;
 import br.com.cmms.repository.UserRepository;
+import io.quarkus.elytron.security.common.BcryptUtil;
 
 @ApplicationScoped
 public class UserService {
@@ -14,11 +16,12 @@ public class UserService {
     UserRepository userRepository;
     
     public void insertUser(User user) {
+        user.setPassword(BcryptUtil.bcryptHash(user.getPassword()));
         userRepository.persist(user);
     }
 
-    public void listAllUsers() {
-        userRepository.listAll();
+    public List<User> listAllUsers() {
+        return userRepository.listAll();
     }
 
     public User listUserById(Long userId) {

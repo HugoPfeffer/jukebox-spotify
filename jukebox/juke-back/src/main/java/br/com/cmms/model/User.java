@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 import io.quarkus.security.jpa.Password;
 import io.quarkus.security.jpa.Roles;
@@ -23,6 +24,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String email;
+
+    private String name;
 
     @Username
     @Column(unique = true)
@@ -60,7 +63,8 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
-
+    
+    @Transient
     public String getPassword() {
         return password;
     }
@@ -75,6 +79,22 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Playlist> getPlaylist() {
+        return playlist;
+    }
+
+    public void setPlaylist(List<Playlist> playlist) {
+        this.playlist = playlist;
     }
 
 }
