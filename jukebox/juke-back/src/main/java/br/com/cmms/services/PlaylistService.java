@@ -5,7 +5,6 @@ import java.util.NoSuchElementException;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.lang.model.util.ElementScanner6;
 
 import br.com.cmms.model.Playlist;
 import br.com.cmms.model.Song;
@@ -32,21 +31,25 @@ public class PlaylistService {
     }
 
     // List Songs On Playlist
-    public List<Song> listAllSongsOnPlaylist(Playlist playlist) {
-        return songRepository.list("playlist", playlist);
+    public List<Song> listAllSongsOnPlaylist(Long playlistId) {
+        Playlist playlist = playlistRepository.findById(playlistId);
+        return playlist.getSongsList();
     }
 
-    // List Songs By ID On Playlist ARRUMAR SAPORRA
+   // List Song By ID On Playlist NÃO ESTÁ RETORNANDO ID 2
     public Song listSongByIdOnPlaylist(Long playlistId, Long songId) {
-        Playlist playlist = playlistRepository.findById(playlistId);
-        Song song = songRepository.findById(songId);
-        List<Song> list = songRepository.list("playlist", playlist);
-        for (Song songFound : list) {
-            if (songFound.equals(song)) {
-                return songFound;
-            } else {
-                throw new NoSuchElementException("This song doen't exist on this playlist");
+        try {
+            Playlist playlist = playlistRepository.findById(playlistId);
+            Song song = songRepository.findById(songId);
+            List<Song> list = playlist.getSongsList();
+            for (Song songFound : list) {
+                if (songFound.equals(song)) {
+                    return songFound;
+                } else {
+                    throw new NoSuchElementException("This song doen't exist on this playlist");
+                }
             }
+        } catch (Exception e) {
         }
         return null;
     }

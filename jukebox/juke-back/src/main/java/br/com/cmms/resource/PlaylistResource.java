@@ -41,18 +41,18 @@ public class PlaylistResource {
         return playlistService.listPlaylistById(playlistId);
     }
 
-    // List all Songs On Playlist
+    // List all Songs On Playlist ARRUMAR
     @GET
     @Path("{playlistId}/songs")
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Song> ListAllSongsOnPlaylist(Playlist playlist) {
-        return playlistService.listAllSongsOnPlaylist(playlist);
+    public List<Song> ListAllSongsOnPlaylist(@PathParam("playlistId") Long playlistId) {
+        return playlistService.listAllSongsOnPlaylist(playlistId);
     }
 
-    // List Song By ID On Playlist
+    // List Song By ID On Playlist NÃO ESTÁ RETORNANDO ID 2
     @GET
-    @Path("{playlistId}/{songId}")
+    @Path("{playlistId}/song/{songId}")
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
     public Song ListSongByIdOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
@@ -71,7 +71,7 @@ public class PlaylistResource {
     // Insert Song on Playlist
     @POST
     @Transactional
-    @Path("{playlistId}/{songId}")
+    @Path("{playlistId}/song/{songId}")
     @PermitAll
     @Consumes(MediaType.APPLICATION_JSON)
     public void insertSongOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
