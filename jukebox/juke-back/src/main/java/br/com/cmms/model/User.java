@@ -38,7 +38,7 @@ public class User {
     private String role;
 
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
-    private List<Playlist> playlist;
+    private List<Playlist> playlists;
 
     public Long getId() {
         return id;
@@ -90,11 +90,11 @@ public class User {
     }
 
     public List<Playlist> getPlaylist() {
-        return playlist;
+        return playlists;
     }
 
     public void setPlaylist(List<Playlist> playlist) {
-        this.playlist = playlist;
+        this.playlists = playlist;
     }
 
 }

@@ -67,7 +67,7 @@ public class Song {
     }
 
     public void removeVote() {
-        if (votes >= 0)
+        if (votes > 0)
             votes--;
     }
 
@@ -78,5 +78,13 @@ public class Song {
     public void setPlaylists(List<Playlist> playlists) {
         this.playlists = playlists;
     }
+
+    @Override
+    public String toString() {
+        return "Song [author=" + author + ", duration=" + duration + ", id=" + id + ", name=" + name + ", playlists="
+                + playlists + ", votes=" + votes + "]";
+    }
+
+    
 
 }

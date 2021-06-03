@@ -14,18 +14,21 @@ public class UserService {
 
     @Inject
     UserRepository userRepository;
-    
-    public void insertUser(User user) {
-        user.setPassword(BcryptUtil.bcryptHash(user.getPassword()));
-        userRepository.persist(user);
-    }
 
+    // List all Users
     public List<User> listAllUsers() {
         return userRepository.listAll();
     }
 
+    // List User by ID
     public User listUserById(Long userId) {
         return userRepository.findById(userId);
+    }
+
+    // Insert new User
+    public void insertUser(User user) {
+        user.setPassword(BcryptUtil.bcryptHash(user.getPassword()));
+        userRepository.persist(user);
     }
 
 }

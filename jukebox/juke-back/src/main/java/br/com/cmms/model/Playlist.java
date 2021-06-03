@@ -56,6 +56,4 @@ public class Playlist {
         this.userId = userId;
     }
 
-
-
 }

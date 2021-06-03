@@ -23,27 +23,30 @@ public class UserResource {
     @Inject
     UserService userService;
 
-    @POST
-    @PermitAll
-    @Transactional
-    @Consumes
-    public void insertUser(User user){
-        userService.insertUser(user);
-    }
-
+    // List all Users
     @GET
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<User> listAllUsers(){
-       return userService.listAllUsers();
+    public List<User> listAllUsers() {
+        return userService.listAllUsers();
     }
-    
+
+    // List User by ID
     @GET
     @Path("{userId}")
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
     public User getUserById(@PathParam("userId") Long userId) {
         return userService.listUserById(userId);
+    }
+
+    // Insert new User
+    @POST
+    @PermitAll
+    @Transactional
+    @Consumes
+    public void insertUser(User user) {
+        userService.insertUser(user);
     }
 
 }

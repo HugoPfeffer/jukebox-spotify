@@ -15,12 +15,20 @@ public class SongService {
     @Inject
     SongRepository songRepository;
 
-    public List<Song> ListAllSongs() {
+    // List all Songs
+    public List<Song> listAllSongs() {
         return songRepository.listAll();
     }
 
-    public List<Song> ListSongsByPlaylist(Playlist playlist){
-        return songRepository.list("playlist", playlist);
+    // List Song by ID
+    public Song listSongById(Long songId) {
+        return songRepository.findById(songId);
     }
+
+    // Insert new Song
+    public void insertSong(Song song) {
+        songRepository.persist(song);
+    }
+
 }
 

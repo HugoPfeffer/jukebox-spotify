@@ -1,5 +1,7 @@
 package br.com.cmms.resource;
 
+import java.util.List;
+
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
@@ -13,35 +15,67 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import br.com.cmms.model.Playlist;
+import br.com.cmms.model.Song;
 import br.com.cmms.services.PlaylistService;
 
-@Path("/Playlist")
+@Path("/playlist")
 public class PlaylistResource {
 
     @Inject
-    PlaylistService PlaylistService;
+    PlaylistService playlistService;
 
+    // List all Playlists
+    @GET
+    @RolesAllowed("admin")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void listAllPlaylists() {
+        playlistService.listAllPlaylists();
+    }
+
+    // List Playlist by ID
+    @GET
+    @Path("{playlistId}")
+    @RolesAllowed("admin")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Playlist getPlaylistById(@PathParam("playlistId") Long playlistId) {
+        return playlistService.listPlaylistById(playlistId);
+    }
+
+    // List all Songs On Playlist
+    @GET
+    @Path("{playlistId}/songs")
+    @RolesAllowed("admin")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Song> ListAllSongsOnPlaylist(Playlist playlist) {
+        return playlistService.listAllSongsOnPlaylist(playlist);
+    }
+
+    // List Song By ID On Playlist
+    @GET
+    @Path("{playlistId}/{songId}")
+    @RolesAllowed("admin")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Song ListSongByIdOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
+        return playlistService.listSongByIdOnPlaylist(playlistId, songId);
+    }
+
+    // Insert new Playlist
     @POST
     @PermitAll
     @Transactional
-    @Consumes
-    public void insertPlaylist(Playlist Playlist){
-        PlaylistService.insertPlaylist(Playlist);
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void insertPlaylist(Playlist playlist) {
+        playlistService.insertPlaylist(playlist);
     }
 
-    @GET
-    @RolesAllowed("admin")
-    @Produces(MediaType.APPLICATION_JSON)
-    public void listAllPlaylists(){
-        PlaylistService.listAllPlaylists();
-    }
-    
-    @GET
-    @Path("/Playlist/{PlaylistId}")
-    @RolesAllowed("admin")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Playlist getPlaylistById(@PathParam("PlaylistId") Long PlaylistId) {
-        return PlaylistService.listPlaylistById(PlaylistId);
+    // Insert Song on Playlist
+    @POST
+    @Transactional
+    @Path("{playlistId}/{songId}")
+    @PermitAll
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void insertSongOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
+        playlistService.insertSongOnPlaylist(playlistId, songId);
     }
 
 }
