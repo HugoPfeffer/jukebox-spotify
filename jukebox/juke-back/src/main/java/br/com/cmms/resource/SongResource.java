@@ -13,7 +13,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import br.com.cmms.model.Playlist;
 import br.com.cmms.model.Song;
 import br.com.cmms.services.SongService;
 

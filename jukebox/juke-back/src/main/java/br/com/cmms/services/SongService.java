@@ -5,7 +5,6 @@ import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
-import br.com.cmms.model.Playlist;
 import br.com.cmms.model.Song;
 import br.com.cmms.repository.SongRepository;
 

@@ -7,6 +7,7 @@ import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -41,21 +42,21 @@ public class PlaylistResource {
         return playlistService.listPlaylistById(playlistId);
     }
 
-    // List all Songs On Playlist ARRUMAR
+    // List all Songs On Playlist
     @GET
     @Path("{playlistId}/songs")
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Song> ListAllSongsOnPlaylist(@PathParam("playlistId") Long playlistId) {
+    public List<Song> listAllSongsOnPlaylist(@PathParam("playlistId") Long playlistId) {
         return playlistService.listAllSongsOnPlaylist(playlistId);
     }
 
-    // List Song By ID On Playlist NÃO ESTÁ RETORNANDO ID 2
+    // List Song By ID On Playlist
     @GET
     @Path("{playlistId}/song/{songId}")
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
-    public Song ListSongByIdOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
+    public Song listSongByIdOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
         return playlistService.listSongByIdOnPlaylist(playlistId, songId);
     }
 
@@ -76,6 +77,26 @@ public class PlaylistResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public void insertSongOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
         playlistService.insertSongOnPlaylist(playlistId, songId);
+    }
+
+    // List Song By ID On Playlist
+    @DELETE
+    @Transactional
+    @Path("{playlistId}/song/{songId}")
+    @RolesAllowed("admin")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void deleteSongByIdOnPlaylist(@PathParam("playlistId") Long playlistId, @PathParam("songId") Long songId) {
+        playlistService.deleteSongByIdOnPlaylist(playlistId, songId);
+    }
+
+    // Delete Playlist by ID
+    @DELETE
+    @Transactional
+    @Path("{playlistId}")
+    @RolesAllowed("admin")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void deletePlaylistById(@PathParam("playlistId") Long playlistId) {
+        playlistService.deletePlaylistById(playlistId);
     }
 
 }

@@ -36,22 +36,18 @@ public class PlaylistService {
         return playlist.getSongsList();
     }
 
-   // List Song By ID On Playlist NÃO ESTÁ RETORNANDO ID 2
+    // List Song By ID On Playlist
     public Song listSongByIdOnPlaylist(Long playlistId, Long songId) {
-        try {
-            Playlist playlist = playlistRepository.findById(playlistId);
-            Song song = songRepository.findById(songId);
-            List<Song> list = playlist.getSongsList();
-            for (Song songFound : list) {
-                if (songFound.equals(song)) {
-                    return songFound;
-                } else {
-                    throw new NoSuchElementException("This song doen't exist on this playlist");
-                }
-            }
-        } catch (Exception e) {
+        Song songFound = null;
+        Playlist playlist = playlistRepository.findById(playlistId);
+        Song wantedSong = songRepository.findById(songId);
+        List<Song> list = playlist.getSongsList();
+        if (list.contains(wantedSong)) {
+            songFound = wantedSong;
+        } else {
+            throw new NoSuchElementException("This song doesn't exist on this playlist.");
         }
-        return null;
+        return songFound;
     }
 
     // Insert new Playlist
@@ -64,11 +60,33 @@ public class PlaylistService {
         Playlist playlist = playlistRepository.findById(playlistId);
         Song song = songRepository.findById(songId);
         List<Song> list = playlist.getSongsList();
+
         if (!list.contains(song)) {
             list.add(song);
-            playlistRepository.persist(playlistRepository.findById(playlistId));
+            playlistRepository.persist(playlist);
         } else
             throw new IllegalArgumentException("This song already exists on this playlist.");
     }
+
+    // Delete Song By ID On Playlist
+    public void deleteSongByIdOnPlaylist(Long playlistId, Long songId) {
+        Playlist playlist = playlistRepository.findById(playlistId);
+        Song wantedSong = songRepository.findById(songId);
+        List<Song> list = playlist.getSongsList();
+        if (list.contains(wantedSong)) {
+            list.remove(wantedSong);
+            playlistRepository.flush();
+        } else {
+            throw new NoSuchElementException("This song doesn't exist on this playlist.");
+        }
+    }
+
+    // Delete Playlist By ID
+    public void deletePlaylistById(Long playlistId) {
+        Playlist playlist = playlistRepository.findById(playlistId);
+        playlistRepository.delete(playlist);
+    }
+
+
 
 }
