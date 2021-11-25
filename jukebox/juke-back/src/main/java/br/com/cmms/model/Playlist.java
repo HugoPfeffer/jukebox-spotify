@@ -56,4 +56,17 @@ public class Playlist {
         this.userId = userId;
     }
 
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", name='" + getName() + "'" +
+            ", songs='" + getSongsList() + "'" +
+            ", userId='" + getUserId() + "'" +
+            "}";
+    }
+
+
 }

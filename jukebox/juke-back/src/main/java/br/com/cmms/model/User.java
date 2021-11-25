@@ -89,7 +89,7 @@ public class User {
         this.name = name;
     }
 
-    public List<Playlist> getPlaylist() {
+    public List<Playlist> getPlaylists() {
         return playlists;
     }
 

@@ -33,8 +33,8 @@ public class PlaylistResource {
     @GET
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
-    public void listAllPlaylists() {
-        playlistService.listAllPlaylists();
+    public List<Playlist> listAllPlaylists() {
+        return playlistService.listAllPlaylists();
     }
 
     // List Playlist by ID
