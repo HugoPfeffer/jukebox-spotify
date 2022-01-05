@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/HugoPfeffer/jukebox/juke-back/3scale/images/logo.png">
+  <a href="https://github.com/HugoPfeffer/jukebox-spotify/jukebox/juke-back/3scale/images/logo.png">
     <img src="3scale/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
