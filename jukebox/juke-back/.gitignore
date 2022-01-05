@@ -47,3 +47,6 @@ nb-configuration.xml
 
 # Local environment
 .env
+
+
+jukebox/juke-back/3scale/commands.sh
