@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://www.vectorlogo.zone/logos/3scalenet/3scalenet-icon.svg">
-    <img src="3scale/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://www.vectorlogo.zone/logos/3scalenet/3scalenet-icon.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Jukefy + 3Scale</h3>
