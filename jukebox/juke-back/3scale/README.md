@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/HugoPfeffer/jukebox-spotify">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="3scale/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Jukefy + 3Scale</h3>
@@ -24,7 +24,6 @@
     <a href="https://github.com/HugoPfeffer/jukebox-spotify"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <!-- <a href="https://github.com/HugoPfeffer/jukebox-spotify">View Demo</a> -->
     ·
     <a href="https://github.com/HugoPfeffer/jukebox-spotify/issues">Report Bug</a>
     ·
@@ -51,8 +50,12 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#Integration with 3Scale">Integration with 3Scale</a></li>
+    <li><a href="#Product">Product</a></li>
+    <li><a href="#Backend">Backend</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#Audiance">Audiance</a></li>
+    <li><a href="#Final Steps">Final Steps</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -65,8 +68,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-
 This is a guide on how to deploy 3Scale on OpenShift and integrate the APICast with Jukefys Backend API. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -75,14 +76,6 @@ This is a guide on how to deploy 3Scale on OpenShift and integrate the APICast w
 
 ### Built With
 
-<!-- * [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com) -->
 * [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift) 
 * [Red Hat 3Scale](https://www.redhat.com/en/technologies/jboss-middleware/3scale) 
 * [Quarkus](https://quarkus.io/) 
@@ -196,16 +189,6 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -214,21 +197,6 @@ Hugo Pfeffer - hugo.pguima@gmail.com
 Gustavo Gianini - ggianini@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-<!-- ## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p> -->
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
