@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/HugoPfeffer/jukebox-spotify">
+  <a href="https://github.com/HugoPfeffer/jukebox/juke-back/3scale/images/logo.png">
     <img src="3scale/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -57,9 +57,7 @@
     <li><a href="#Audiance">Audiance</a></li>
     <li><a href="#Final Steps">Final Steps</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
