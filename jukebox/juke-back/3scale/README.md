@@ -108,33 +108,39 @@ This module will cover how to integrate Jukefy backend API with 3Scale API Gatew
 * Name: **Jukefy API**
 * System Name: **jukefy-api**
 * Description: **Managed API by 3scale**
-<p align="right">(<a href="#top">back to top</a>)</p>
+
+![API Manager Deploy](images/3scale-4.png)
+![API Manager Deploy](images/3scale-3.png)
 
 2. Add metrics to that product
 
 `Go to Jukefy product page -> Integration -> Methods & Metrics -> New Method`
 `Go to Jukefy product page -> Integration -> Methods & Metrics -> New Metrics`
-===== image ======
+![API Manager Deploy](images/3scale-1.png)
 
 3. Add Mapping Rules to that product
 `Go to Jukefy product page -> Integration -> Mapping Rules -> Create Mapping rule`
-===== image ======
 
-    Add Mapping Rules for all metrics and methods we created.
-
-===== image ======
+![API Manager Deploy](images/3scale-5.png)
+    *Add Mapping Rules for all metrics and methods we created.*
 
 4. Add an Application Plan for your managed API
 
 `Go to Jukefy product page -> Applications -> Application Plan -> Create Application Plan`
 
+![API Manager Deploy](images/3scale-7.png)
+
     *Feel free to add custom billings to the API*
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Backend
 
 1. Create a connection between the APICast and the Backend API from Jukefy.
 
 `Top Left Dropdown -> Backends -> Create Backend`
+
+![API Manager Deploy](images/3scale-6.png)
 
 2. Apply the same Methods and Metrics to the Backend the same way we did on Products
 
