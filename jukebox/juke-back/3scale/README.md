@@ -92,6 +92,12 @@ For instructions on how to deploy 3Scale on OpenShift, please refer to [Vinicius
 * [OpenShift Setup](https://github.com/redhat-sa-brazil/3scale-workshop/blob/master/OPENSHIFT_SETUP.md)
 * [3Scale Setup](https://github.com/redhat-sa-brazil/3scale-workshop/blob/master/3SCALE_SETUP.md)
 
+
+Or you can use the ```3scale-deploy-script.sh``` for the deployment of 3scale alongside the Jukefy app. 
+```sh
+./3scale-deploy-script.sh <project-name>
+```
+
 ### Prerequisites
 
 * OpenShift 4.8 Cluster
